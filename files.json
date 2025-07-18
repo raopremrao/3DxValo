@@ -1,0 +1,24 @@
+{
+	"Characters": [
+		"Characters_kelvin_deadlock_hero_model"		
+	],
+	"Guns": [
+		"Guns_bison_mark_II",
+		"Guns_operator_spline",
+		"Guns_operator",
+		"Guns_bulldog",
+		"Guns_araxys_bundle",
+		"Guns_vandal",
+		"Guns_vandal_reaver",
+		"Guns_smoking_gun",
+		"Guns_recon_phantom_rifle"
+		
+	],
+	"FanArt":[
+		"FanArt_revolver_sheriff_medusa"
+	],
+	"Knife": [
+		"Knife_jetts_knife"
+	]
+
+}
