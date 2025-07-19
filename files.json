@@ -2,6 +2,9 @@
 	"Characters": [
 		"Characters_kelvin_deadlock_hero_model"		
 	],
+	"FanArt":[
+		"FanArt_revolver_sheriff_medusa"
+	],
 	"Guns": [
 		"Guns_bison_mark_II",
 		"Guns_operator_spline",
@@ -12,9 +15,6 @@
 		"Guns_smoking_gun",
 		"Guns_recon_phantom_rifle"
 		
-	],
-	"FanArt":[
-		"FanArt_revolver_sheriff_medusa"
 	],
 	"Knife": [
 		"Knife_jetts_knife"
