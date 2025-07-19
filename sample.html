@@ -78,7 +78,7 @@
 
         import { KTX2Loader } from 'jsm/loaders/KTX2Loader.js'; // Optional, for compressed textures
         import { MeshoptDecoder } from 'jsm/libs/meshopt_decoder.module.js'; // Optional, for mesh optimization
-
+        import { DRACOLoader } from 'jsm/loaders/DRACOLoader.js';
 
         let camera, scene, renderer;
 
@@ -119,19 +119,23 @@
             .setTranscoderPath('jsm/libs/basis/')
             .detectSupport(renderer);
 
+            const dracoLoader = new DRACOLoader();
+            dracoLoader.setDecoderPath('jsm/libs/draco/');
+
             const loader = new GLTFLoader();
+            loader.setDRACOLoader(dracoLoader);
             loader.setKTX2Loader(ktx2Loader);
             loader.setMeshoptDecoder(MeshoptDecoder);
-            loader.load('Models/Guns/jetts_knife.glb', function(gltf){
+            loader.load('Models/Guns/bison_mark_ii.glb', function(gltf){
                 gltf.scene.position.y = 80;
                 scene.add(gltf.scene);
-                gltf.scene.scale.set(1,1,1);
+                gltf.scene.scale.set(800,800,800);
                 render();
             });
 
             const controls = new OrbitControls(camera, renderer.domElement);
             controls.addEventListener('change',render);
-            controls.minDistance = 400;
+            controls.minDistance = 100;
             controls.maxDistance = 1000;
             controls.target.set(20, 90, -16);
             controls.update();
