@@ -101,8 +101,7 @@
 
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
             // camera.position.set(0,100,0);
-            camera.position.set(-97.25889797743001, 64.66108482743562, 2.667191542847287);
-
+            camera.position.set(-72.97034692436381, 116.29751590095603, 46.788551903450276)
             const environment = new RoomEnvironment();
             const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
@@ -145,7 +144,7 @@
 
             const controls = new OrbitControls(camera, renderer.domElement);
             controls.addEventListener('change',render);
-            controls.minDistance = 100;
+            controls.minDistance = 50;
             controls.maxDistance = 1000;
             // controls.target.set(20, 90, -16);
             controls.target.set(2.5897723886605686, 69.7839703053049, 0.6674239302223073);

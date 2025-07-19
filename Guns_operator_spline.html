@@ -107,17 +107,19 @@
             const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
             scene = new THREE.Scene();
-            scene.background = new THREE.Color(0xbbbbbb);
-            // scene.background = new THREE.Color(0x212121);
+            // scene.background = new THREE.Color(0xbbbbbb);
+            // scene.background = new THREE.Color(0x000080);
+            // scene.background = new THREE.Color(0x4b0082);
+            scene.background = new THREE.Color(0x212121);
             scene.environment = pmremGenerator.fromScene(environment).texture;
             environment.dispose();
 
             // const grid = new THREE.GridHelper(1000, 20, 0xffffff, 0xffffff);
             const grid = new THREE.GridHelper(1000, 20, 0x000000, 0x000000);
-            grid.material.opacity = 0.5;
+            grid.material.opacity = 1;
             grid.material.depthWrite = false;
             // grid.material.transparent = true;
-            scene.add( grid );
+            // scene.add( grid );
 
             const ktx2Loader = new KTX2Loader()
             .setTranscoderPath('jsm/libs/basis/')

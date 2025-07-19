@@ -101,14 +101,13 @@
 
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
             // camera.position.set(0,100,0);
-            camera.position.set(315.53075218715486, 18.096570743586476, -15.115574000993007)
-
+            camera.position.set(178.58502843073364, 178.43599719325545, 304.289916965216)
             const environment = new RoomEnvironment();
             const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
             scene = new THREE.Scene();
             // scene.background = new THREE.Color(0xbbbbbb);
-            scene.background = new THREE.Color(0x212121);
+            // scene.background = new THREE.Color(0x212121);
             scene.environment = pmremGenerator.fromScene(environment).texture;
             environment.dispose();
 
@@ -146,7 +145,7 @@
             controls.minDistance = 100;
             controls.maxDistance = 1000;
             // controls.target.set(20, 90, -16);
-            controls.target.set(19.29414654175122, 79.7525826535471, -3.4421492901051627);
+            controls.target.set(-49.018203224077624, 63.52940729497472, -19.647016891859455);
             controls.update();
 
             window.addEventListener('keydown', function(event) {

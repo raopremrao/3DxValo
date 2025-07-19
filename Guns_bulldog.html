@@ -101,14 +101,13 @@
 
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
             // camera.position.set(0,100,0);
-            camera.position.set(-2.036678358583021, 82.14968618599684, -92.00587080907151)
-
+            camera.position.set(-7.888060398399725, 51.498967898393694, -133.9030975652604)
             const environment = new RoomEnvironment();
             const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
             scene = new THREE.Scene();
             // scene.background = new THREE.Color(0xbbbbbb);
-            scene.background = new THREE.Color(0x212121);
+            // scene.background = new THREE.Color(0x212121);
             scene.environment = pmremGenerator.fromScene(environment).texture;
             environment.dispose();
 
@@ -130,7 +129,7 @@
             loader.setKTX2Loader(ktx2Loader);
             loader.setMeshoptDecoder(MeshoptDecoder);
             loader.load('Models/Guns/bulldog.glb', function(gltf){
-                gltf.scene.position.y = 80;
+                gltf.scene.position.y = 40;
                 if (gltf.parser.json.extensionsUsed && gltf.parser.json.extensionsUsed.includes('KHR_draco_mesh_compression')) {
                     console.log('Draco compression is used.');
                 } else {
@@ -146,7 +145,7 @@
             controls.minDistance = 50;
             controls.maxDistance = 1000;
             // controls.target.set(20, 90, -16);
-            controls.target.set(-3.1780938922694477, 99.93395771262277, -12.157157755424338);
+            controls.target.set(-8.816404227620673, 71.59672272133982, -5.926356940087444);
             controls.update();
 
             window.addEventListener('keydown', function(event) {
