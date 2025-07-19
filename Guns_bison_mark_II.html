@@ -76,8 +76,8 @@
         import { OrbitControls } from 'jsm/controls/OrbitControls.js';
         import { RoomEnvironment } from 'jsm/environments/RoomEnvironment.js';
 
-        import { KTX2Loader } from 'jsm/loaders/KTX2Loader.js'; // Optional, for compressed textures
-        import { MeshoptDecoder } from 'jsm/libs/meshopt_decoder.module.js'; // Optional, for mesh optimization
+        // import { KTX2Loader } from 'jsm/loaders/KTX2Loader.js'; // Optional, for compressed textures
+        // import { MeshoptDecoder } from 'jsm/libs/meshopt_decoder.module.js'; // Optional, for mesh optimization
         import { DRACOLoader } from 'jsm/loaders/DRACOLoader.js';
 
 
@@ -117,9 +117,9 @@
             grid.material.transparent = true;
             scene.add( grid );
 
-            const ktx2Loader = new KTX2Loader()
-            .setTranscoderPath('jsm/libs/basis/')
-            .detectSupport(renderer);
+            // const ktx2Loader = new KTX2Loader()
+            // .setTranscoderPath('jsm/libs/basis/')
+            // .detectSupport(renderer);
 
             const dracoLoader = new DRACOLoader();
             dracoLoader.setDecoderPath('jsm/libs/draco/');
