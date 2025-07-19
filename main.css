@@ -635,4 +635,7 @@ iframe#viewer {
 	#viewer {
 		padding-left: 0;
 	}
+	#button {
+		display: none;
+	}
 }
