@@ -128,6 +128,11 @@
             loader.setMeshoptDecoder(MeshoptDecoder);
             loader.load('Models/Guns/bison_mark_ii.glb', function(gltf){
                 gltf.scene.position.y = 80;
+                if (gltf.parser.json.extensionsUsed && gltf.parser.json.extensionsUsed.includes('KHR_draco_mesh_compression')) {
+                    console.log('Draco compression is used.');
+                } else {
+                    console.log('Draco compression is not used.');
+                }
                 scene.add(gltf.scene);
                 gltf.scene.scale.set(800,800,800);
                 render();
