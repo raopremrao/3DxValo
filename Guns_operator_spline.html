@@ -15,7 +15,7 @@
         }
 
         a{
-            color: #ff0;
+            color: rgb(0, 106, 255);
             text-decoration: none;
         }
 
@@ -108,9 +108,10 @@
 
             scene = new THREE.Scene();
             // scene.background = new THREE.Color(0xbbbbbb);
+            scene.background = new THREE.Color(0xbfe3dd);
             // scene.background = new THREE.Color(0x000080);
             // scene.background = new THREE.Color(0x4b0082);
-            scene.background = new THREE.Color(0x212121);
+            // scene.background = new THREE.Color(0x212121);
             scene.environment = pmremGenerator.fromScene(environment).texture;
             environment.dispose();
 
@@ -151,6 +152,9 @@
             // controls.target.set(20, 90, -16);
             controls.target.set(33.80626875026141, 82.8083724691842, -29.42810162861506);
             controls.update();
+            controls.enablePan = false;
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.1;
 
             window.addEventListener('keydown', function(event) {
                 if (event.code === 'ArrowUp') {
