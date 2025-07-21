@@ -101,7 +101,7 @@
 
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
             // camera.position.set(0,100,0);
-            camera.position.set(-72.97034692436381, 116.29751590095603, 46.788551903450276)
+            camera.position.set(-134.5855823888584, 66.44942753088435, 0.37615890415796915);
             const environment = new RoomEnvironment();
             const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
@@ -147,7 +147,11 @@
             controls.minDistance = 50;
             controls.maxDistance = 1000;
             // controls.target.set(20, 90, -16);
-            controls.target.set(2.5897723886605686, 69.7839703053049, 0.6674239302223073);
+            controls.target.set(0.8232034886677236, 54.82604981950364, -5.585037282006825);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.3;
+            // enable Paning
+            // controls.enablePan = false;
             controls.update();
 
             window.addEventListener('keydown', function(event) {
